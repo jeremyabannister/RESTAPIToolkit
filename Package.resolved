@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AppArchitecture",
+        "repositoryURL": "https://github.com/jeremyabannister/AppArchitecture",
+        "state": {
+          "branch": null,
+          "revision": "89d681e3f687e60c50675201552cc3a9663a0ddc",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "CoreToolkit",
+        "repositoryURL": "https://github.com/jeremyabannister/CoreToolkit",
+        "state": {
+          "branch": null,
+          "revision": "7a605aa24d3caaf6188c30cb0dbba59f94dfae24",
+          "version": "0.1.9"
+        }
+      },
+      {
+        "package": "DateToolkit",
+        "repositoryURL": "https://github.com/jeremyabannister/DateToolkit",
+        "state": {
+          "branch": null,
+          "revision": "16f1d8ea64a16ebf46a59ba71566b81e58d441de",
+          "version": "0.1.7"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
