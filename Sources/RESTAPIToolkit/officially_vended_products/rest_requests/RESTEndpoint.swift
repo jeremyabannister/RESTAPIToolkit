@@ -6,7 +6,7 @@
 //
 
 ///
-public struct RESTEndpoint: Equatable,
+public struct RESTEndpoint: Hashable,
                             CustomStringConvertible,
                             Ergonomic {
     
