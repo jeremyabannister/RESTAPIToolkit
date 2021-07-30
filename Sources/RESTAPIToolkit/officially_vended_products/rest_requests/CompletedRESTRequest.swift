@@ -7,9 +7,9 @@
 
 ///
 public struct CompletedRESTRequest
-<Request: Codable & Equatable & RESTRequestEncodable>:
+<Request: Codable & Hashable & RESTRequestEncodable>:
     Codable,
-    Equatable {
+    Hashable {
     
     ///
     public var request: Request
