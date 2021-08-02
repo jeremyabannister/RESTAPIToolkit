@@ -40,8 +40,24 @@ public struct CompletedRESTRequest
 public extension CompletedRESTRequest {
     
     ///
-    func response () throws -> Request.Response {
-        try request.parseResponse(from: rawResponse)
+    func result () -> Request.RESTResult {
+        switch rawResponse {
+        case .success (let data):
+            if let successfulValue = request.parseSuccessfulResponse(from: data) {
+                return .success(successfulValue)
+            } else if let standardError = request.parseStandardError(from: data) {
+                return .failure(.understood(standardError: standardError))
+            } else {
+                return .failure(.uninterpretable(rawData: data))
+            }
+        case .failure (let networkError):
+            return .failure(.networkError(networkError))
+        }
+    }
+    
+    ///
+    var wasSuccessful: Bool {
+        result().successfulValue.isNotNil
     }
 }
 

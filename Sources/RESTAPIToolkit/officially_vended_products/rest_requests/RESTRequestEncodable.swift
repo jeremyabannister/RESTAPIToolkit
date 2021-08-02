@@ -12,25 +12,21 @@ public protocol RESTRequestEncodable {
     var asRESTRequest: RESTRequest { get }
     
     ///
-    associatedtype Response
+    associatedtype SuccessfulResponse: Hashable
     
     ///
-    func parseResponse (from rawResponse: RawRESTResponse) throws -> Response
+    associatedtype StandardError: Hashable
+    
+    ///
+    func parseSuccessfulResponse (from data: Data) -> SuccessfulResponse?
+    
+    ///
+    func parseStandardError (from data: Data) -> StandardError?
 }
 
 ///
-extension RESTRequest: RESTRequestEncodable {
+public extension RESTRequestEncodable {
     
     ///
-    public typealias Response = RawRESTResponse
-    
-    ///
-    public var asRESTRequest: RESTRequest {
-        self
-    }
-    
-    ///
-    public func parseResponse (from rawResponse: RawRESTResponse) -> RawRESTResponse {
-        return rawResponse
-    }
+    typealias RESTResult = Result<SuccessfulResponse, RESTError<Self>>
 }

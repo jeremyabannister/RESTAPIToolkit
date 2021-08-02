@@ -6,4 +6,4 @@
 //
 
 ///
-public typealias RawRESTResponse = Result<Data, ErrorMessage>
+public typealias RawRESTResponse = Result<Data, NetworkError>
