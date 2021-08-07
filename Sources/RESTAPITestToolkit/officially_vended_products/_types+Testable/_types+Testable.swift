@@ -7,5 +7,4 @@
 
 ///
 extension RESTEndpoint: Testable { }
-extension RESTInteractionID: Testable { }
 extension RESTRequest: Testable { }

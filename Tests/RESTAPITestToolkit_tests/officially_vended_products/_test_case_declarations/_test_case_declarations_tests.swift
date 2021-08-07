@@ -7,5 +7,4 @@
 
 ///
 extension RESTEndpoint_tests { }
-extension RESTInteractionID_tests { }
 extension RESTRequest_tests { }

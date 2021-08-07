@@ -13,13 +13,6 @@ extension RESTEndpoint_tests {
 }
 
 ///
-extension RESTInteractionID_tests {
-    func test_conformsToTestable () {
-        proof_Testable(metatype)
-    }
-}
-
-///
 extension RESTRequest_tests {
     func test_conformsToTestable () {
         proof_Testable(metatype)

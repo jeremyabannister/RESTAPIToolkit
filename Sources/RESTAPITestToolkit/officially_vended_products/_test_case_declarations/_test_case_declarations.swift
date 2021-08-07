@@ -11,11 +11,6 @@ public final class RESTEndpoint_tests: SingleTypeTestCase {
 }
 
 ///
-public final class RESTInteractionID_tests: SingleTypeTestCase {
-    public typealias Subject = RESTInteractionID
-}
-
-///
 public final class RESTRequest_tests: SingleTypeTestCase {
     public typealias Subject = RESTRequest
 }

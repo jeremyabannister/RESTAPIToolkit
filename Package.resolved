@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/jeremyabannister/CoreToolkit",
         "state": {
           "branch": null,
-          "revision": "7a605aa24d3caaf6188c30cb0dbba59f94dfae24",
-          "version": "0.1.9"
+          "revision": "44ee9603e8f403d10b72e846bb7f3df3815e2d3f",
+          "version": "0.2.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/jeremyabannister/DateToolkit",
         "state": {
           "branch": null,
-          "revision": "16f1d8ea64a16ebf46a59ba71566b81e58d441de",
-          "version": "0.1.7"
+          "revision": "a266611d5d205b4a98e3748e2614d63efd01520d",
+          "version": "0.1.8"
         }
       }
     ]
