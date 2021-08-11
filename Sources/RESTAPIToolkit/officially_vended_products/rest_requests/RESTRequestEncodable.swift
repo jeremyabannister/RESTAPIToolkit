@@ -6,7 +6,7 @@
 //
 
 ///
-public protocol RESTRequestEncodable {
+public protocol RESTRequestEncodable: Hashable {
     
     ///
     var asRESTRequest: RESTRequest { get }
