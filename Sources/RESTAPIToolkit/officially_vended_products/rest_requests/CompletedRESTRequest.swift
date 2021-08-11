@@ -6,10 +6,7 @@
 //
 
 ///
-public struct CompletedRESTRequest
-<Request: Codable & Hashable & RESTRequestEncodable>:
-    Codable,
-    Hashable {
+public struct CompletedRESTRequest <Request: RESTRequestEncodable>: Hashable {
     
     ///
     public var request: Request
@@ -65,18 +62,10 @@ public extension CompletedRESTRequest {
 // MARK: - Codable Conformance
 
 ///
-public extension CompletedRESTRequest {
+extension CompletedRESTRequest: Codable where Request: Codable {
     
     ///
-    enum CodingKeys: CodingKey {
-        case request
-        case rawResponse
-        case dateInitiated
-        case dateCompleted
-    }
-    
-    ///
-    func encode (to encoder: Encoder) throws {
+    public func encode (to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(request, forKey: .request)
         try container.encode(rawResponse, forKey: .rawResponse)
@@ -85,7 +74,7 @@ public extension CompletedRESTRequest {
     }
     
     ///
-    init (from decoder: Decoder) throws {
+    public init (from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.init(
             request: try container.decode(Request.self, forKey: .request),
@@ -93,5 +82,13 @@ public extension CompletedRESTRequest {
             dateInitiated: try container.decode(DiscreteDate.self, forKey: .dateInitiated),
             dateCompleted: try container.decode(DiscreteDate.self, forKey: .dateCompleted)
         )
+    }
+    
+    ///
+    private enum CodingKeys: CodingKey {
+        case request
+        case rawResponse
+        case dateInitiated
+        case dateCompleted
     }
 }
