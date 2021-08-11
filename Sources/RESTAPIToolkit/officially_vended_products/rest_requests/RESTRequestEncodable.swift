@@ -9,13 +9,16 @@
 public protocol RESTRequestEncodable: Hashable {
     
     ///
-    var asRESTRequest: RESTRequest { get }
+    associatedtype Configuration: Hashable
     
     ///
     associatedtype SuccessfulResponse: Hashable
     
     ///
     associatedtype StandardError: Hashable
+    
+    ///
+    func asRESTRequest (configuration: Configuration) -> RESTRequest
     
     ///
     func parseSuccessfulResponse (from data: Data) -> SuccessfulResponse?
