@@ -6,7 +6,7 @@
 //
 
 ///
-public protocol RESTRequestEncodable: Hashable {
+public protocol RESTRequestEncodable: ProperValueType {
     
     ///
     associatedtype Configuration: Hashable
