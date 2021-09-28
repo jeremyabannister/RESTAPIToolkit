@@ -6,7 +6,7 @@
 //
 
 ///
-public struct CompletedRESTRequest <Request: RESTRequestEncodable>: Hashable {
+public struct CompletedRESTRequest <Request: RESTRequestEncodable>: ProperValueType {
     
     ///
     public var request: Request
