@@ -6,8 +6,8 @@
 //
 
 ///
-public enum RESTError <Request: RESTRequestEncodable>: Error,
-                                                       Hashable {
+public enum RESTError <Request: RESTRequestEncodable>: ProperValueType,
+                                                       Error {
     
     ///
     case networkError (NetworkError)

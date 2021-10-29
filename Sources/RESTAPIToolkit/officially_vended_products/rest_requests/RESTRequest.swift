@@ -6,8 +6,7 @@
 //
 
 /// An `RESTRequest` is everything that a `URLRequest` is minus the base URL, meaning that a single `RESTRequest` value is usable across many base URLs. Use `RESTRequest.urlRequest(usingBaseURL:)` to generate the `URLRequest` to send this `RESTRequest` to the given base URL.
-public struct RESTRequest: Hashable,
-                           Ergonomic {
+public struct RESTRequest: ProperValueType {
     
     public var endpoint: RESTEndpoint
     public var method: String

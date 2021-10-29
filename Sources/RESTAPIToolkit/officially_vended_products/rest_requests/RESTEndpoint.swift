@@ -6,9 +6,8 @@
 //
 
 ///
-public struct RESTEndpoint: Hashable,
-                            CustomStringConvertible,
-                            Ergonomic {
+public struct RESTEndpoint: ProperValueType,
+                            CustomStringConvertible {
     
     ///
     public var relativePath: PathOfStrings
