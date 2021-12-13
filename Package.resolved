@@ -2,21 +2,21 @@
   "object": {
     "pins": [
       {
-        "package": "AppArchitecture",
-        "repositoryURL": "https://github.com/jeremyabannister/AppArchitecture",
+        "package": "CompleteDictionary",
+        "repositoryURL": "https://github.com/jeremyabannister/CompleteDictionary",
         "state": {
           "branch": null,
-          "revision": "89d681e3f687e60c50675201552cc3a9663a0ddc",
-          "version": "0.1.0"
+          "revision": "e0f94d314d2dbbdbc98214908e7bb614338cf034",
+          "version": "0.1.1"
         }
       },
       {
-        "package": "CoreToolkit",
+        "package": "NimbleToolkit",
         "repositoryURL": "https://github.com/jeremyabannister/CoreToolkit",
         "state": {
           "branch": null,
-          "revision": "d46d34c02f45943d361e98648c57a305d8bf5ebf",
-          "version": "0.2.4"
+          "revision": "1795b5e8fed258b4f5fbbe125d6a1a9e4d82c7dc",
+          "version": "0.3.4"
         }
       },
       {
@@ -24,8 +24,98 @@
         "repositoryURL": "https://github.com/jeremyabannister/DateToolkit",
         "state": {
           "branch": null,
-          "revision": "cdf5a7faab7420aee423299ba0aa5ccd8c335be4",
-          "version": "0.1.9"
+          "revision": "b702a7c37c59a8ac5fb9dae5246e13339f0f4734",
+          "version": "0.2.1"
+        }
+      },
+      {
+        "package": "ErrorMessage",
+        "repositoryURL": "https://github.com/jeremyabannister/ErrorMessage",
+        "state": {
+          "branch": null,
+          "revision": "1468d23676022016c33870feb501b29939ff5722",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "ExpressionErgonomics",
+        "repositoryURL": "https://github.com/jeremyabannister/ExpressionErgonomics",
+        "state": {
+          "branch": null,
+          "revision": "07cb1cceee8ec7f6d871855bcda6d6ab9b4043c8",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "FoundationToolkit",
+        "repositoryURL": "https://github.com/jeremyabannister/FoundationToolkit",
+        "state": {
+          "branch": null,
+          "revision": "4e6f28a236696223e32eb814c5e6822cec5b9e07",
+          "version": "0.1.3"
+        }
+      },
+      {
+        "package": "NimbleToolkit",
+        "repositoryURL": "https://github.com/jeremyabannister/NimbleToolkit",
+        "state": {
+          "branch": null,
+          "revision": "1795b5e8fed258b4f5fbbe125d6a1a9e4d82c7dc",
+          "version": "0.3.4"
+        }
+      },
+      {
+        "package": "ProperValueType",
+        "repositoryURL": "https://github.com/jeremyabannister/ProperValueType",
+        "state": {
+          "branch": null,
+          "revision": "fff4702852d0658676da1896c93625e7ff4b0f7d",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "ReferenceType",
+        "repositoryURL": "https://github.com/jeremyabannister/ReferenceType",
+        "state": {
+          "branch": null,
+          "revision": "df906ebeb31f2de16e3cf6b0bc38dc903fee8361",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "Testable",
+        "repositoryURL": "https://github.com/jeremyabannister/Testable",
+        "state": {
+          "branch": null,
+          "revision": "5eb6bfd344bbf0fea93cf59027a13dcb52825a47",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "UnwrapOrThrowOperator",
+        "repositoryURL": "https://github.com/jeremyabannister/UnwrapOrThrowOperator",
+        "state": {
+          "branch": null,
+          "revision": "83975fc5e5a552ad4bbaea30bc980b456ad704a6",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "VerboseEquatable",
+        "repositoryURL": "https://github.com/jeremyabannister/VerboseEquatable",
+        "state": {
+          "branch": null,
+          "revision": "1cc7ee4342ab5b5f6c1a2e6581fee21d2fb5ea42",
+          "version": "0.1.4"
+        }
+      },
+      {
+        "package": "XCTestToolkit",
+        "repositoryURL": "https://github.com/jeremyabannister/XCTestToolkit",
+        "state": {
+          "branch": null,
+          "revision": "12e9e9cb6ae61489a5e872b7e086db9b03f2ea2e",
+          "version": "0.1.2"
         }
       }
     ]
