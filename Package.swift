@@ -1,5 +1,4 @@
 // swift-tools-version:5.4
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -7,7 +6,6 @@ let package = Package(
     name: "RESTAPIToolkit",
     platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v3), .tvOS(.v10)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "RESTAPIToolkit",
             targets: ["RESTAPIToolkit"]
@@ -18,37 +16,29 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/jeremyabannister/CoreToolkit", from: "0.1.0"),
-        .package(url: "https://github.com/jeremyabannister/DateToolkit", from: "0.1.0")
+        .package(
+            url: "https://github.com/jeremyabannister/DateToolkit",
+            from: "0.2.1"
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "RESTAPIToolkit",
-            dependencies: [
-                "CoreToolkit",
-                "DateToolkit"
-            ]
+            dependencies: ["DateToolkit"]
         ),
         .target(
             name: "RESTAPITestToolkit",
             dependencies: [
                 "RESTAPIToolkit",
-                .product(name: "XCTestToolkit", package: "CoreToolkit"),
                 .product(name: "DateTestToolkit", package: "DateToolkit")
             ]
         ),
         .testTarget(
-            name: "RESTAPIToolkit_tests",
-            dependencies: [
-                "RESTAPIToolkit",
-                "RESTAPITestToolkit"
-            ]
+            name: "RESTAPIToolkit-tests",
+            dependencies: ["RESTAPITestToolkit"]
         ),
         .testTarget(
-            name: "RESTAPITestToolkit_tests",
+            name: "RESTAPITestToolkit-tests",
             dependencies: ["RESTAPITestToolkit"]
         ),
     ]

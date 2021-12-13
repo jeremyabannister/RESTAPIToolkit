@@ -17,7 +17,7 @@ extension RESTEndpoint_tests {
     func test_conformances () {
         proof_CustomStringConvertible(metatype)
         proof_Equatable(metatype)
-        proof_Ergonomic(metatype)
+        proof_ExpressionErgonomic(metatype)
     }
     
     ///
