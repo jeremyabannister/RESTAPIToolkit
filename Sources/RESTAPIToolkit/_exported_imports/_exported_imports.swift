@@ -5,5 +5,5 @@
 //  Created by Jeremy Bannister on 7/6/21.
 //
 
-@_exported import CoreToolkit
+@_exported import NimbleToolkit
 @_exported import DateToolkit

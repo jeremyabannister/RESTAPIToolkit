@@ -7,5 +7,4 @@
 
 ///
 @_exported import RESTAPIToolkit
-@_exported import XCTestToolkit
 @_exported import DateTestToolkit

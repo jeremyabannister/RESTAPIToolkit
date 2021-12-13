@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "RESTAPIToolkit"
-               BuildableName = "RESTAPIToolkit"
-               BlueprintName = "RESTAPIToolkit"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "RESTAPITestToolkit"
                BuildableName = "RESTAPITestToolkit"
                BlueprintName = "RESTAPITestToolkit"
@@ -49,16 +35,6 @@
                BlueprintIdentifier = "RESTAPITestToolkit-tests"
                BuildableName = "RESTAPITestToolkit-tests"
                BlueprintName = "RESTAPITestToolkit-tests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "RESTAPIToolkit-tests"
-               BuildableName = "RESTAPIToolkit-tests"
-               BlueprintName = "RESTAPIToolkit-tests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -84,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "RESTAPIToolkit"
-            BuildableName = "RESTAPIToolkit"
-            BlueprintName = "RESTAPIToolkit"
+            BlueprintIdentifier = "RESTAPITestToolkit"
+            BuildableName = "RESTAPITestToolkit"
+            BlueprintName = "RESTAPITestToolkit"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
