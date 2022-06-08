@@ -73,15 +73,6 @@
       }
     },
     {
-      "identity" : "jsonliterals",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jeremyabannister/JSONLiterals",
-      "state" : {
-        "revision" : "4b0586ed52ff954db4fd51faeaf922a548f79902",
-        "version" : "0.1.0"
-      }
-    },
-    {
       "identity" : "notdone",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/NOTDONE",

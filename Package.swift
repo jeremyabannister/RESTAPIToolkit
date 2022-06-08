@@ -25,12 +25,6 @@ let package = Package(
         
         ///
         .package(
-            url: "https://github.com/jeremyabannister/JSONLiterals",
-            from: "0.1.0"
-        ),
-        
-        ///
-        .package(
             url: "https://github.com/jeremyabannister/FoundationToolkit",
             from: "0.1.0"
         )
@@ -43,7 +37,7 @@ let package = Package(
             dependencies: [
                 
                 ///
-                "JSONLiterals"
+                "FoundationToolkit"
             ]
         ),
         

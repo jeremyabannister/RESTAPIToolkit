@@ -5,4 +5,4 @@
 //  Created by Jeremy Bannister on 7/6/21.
 //
 
-@_exported import JSONLiterals
+@_exported import FoundationToolkit
