@@ -6,8 +6,10 @@
 //
 
 ///
-public struct _CompletedRESTRequest <Request: RESTRequestEncodable,
-                                     Response: Hashable>: ProperValueType {
+public struct _CompletedRESTRequest
+    <Request: RESTRequestEncodable,
+     Response: Hashable>:
+        ProperValueType {
     
     ///
     public var request: Request
@@ -16,16 +18,16 @@ public struct _CompletedRESTRequest <Request: RESTRequestEncodable,
     public var response: Response
     
     ///
-    public var dateInitiated: DiscreteDate
+    public var dateInitiated: Date
     
     ///
-    public var dateCompleted: DiscreteDate
+    public var dateCompleted: Date
     
     ///
     public init (request: Request,
                  response: Response,
-                 dateInitiated: DiscreteDate,
-                 dateCompleted: DiscreteDate) {
+                 dateInitiated: Date,
+                 dateCompleted: Date) {
         
         self.request = request
         self.response = response
@@ -60,8 +62,8 @@ extension _CompletedRESTRequest: Codable
         self.init(
             request: try container.decode(Request.self, forKey: .request),
             response: try container.decode(Response.self, forKey: .response),
-            dateInitiated: try container.decode(DiscreteDate.self, forKey: .dateInitiated),
-            dateCompleted: try container.decode(DiscreteDate.self, forKey: .dateCompleted)
+            dateInitiated: try container.decode(Date.self, forKey: .dateInitiated),
+            dateCompleted: try container.decode(Date.self, forKey: .dateCompleted)
         )
     }
     

@@ -7,4 +7,4 @@
 
 ///
 @_exported import RESTAPIToolkit
-@_exported import DateTestToolkit
+@_exported import FoundationTestToolkit

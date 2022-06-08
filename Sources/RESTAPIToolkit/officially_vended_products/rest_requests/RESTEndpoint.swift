@@ -10,10 +10,10 @@ public struct RESTEndpoint: ProperValueType,
                             CustomStringConvertible {
     
     ///
-    public var relativePath: PathOfStrings
+    public var relativePath: [String]
     
     ///
-    public init (_ relativePath: PathOfStrings) {
+    public init (_ relativePath: [String]) {
         self.relativePath = relativePath
     }
 }
@@ -36,6 +36,15 @@ public extension RESTEndpoint {
     
     ///
     var description: String {
-        relativePath.pathString
+        "/\(relativePath.joined(separator: "/"))"
+    }
+}
+
+///
+fileprivate extension URL {
+    
+    ///
+    func appendingStringPath (_ stringPath: [String]) -> Self {
+        stringPath.reduce(into: self) { $0.appendPathComponent($1) }
     }
 }
