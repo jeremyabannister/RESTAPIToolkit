@@ -22,7 +22,7 @@ extension RESTEndpoint_tests {
     
     ///
     func test_properties () {
-        proof_mutableProperty(\Subject.relativePath, PathOfStrings.self)
+        proof_mutableProperty(\.relativePath, Array<String>.self)
     }
     
     ///
@@ -30,11 +30,11 @@ extension RESTEndpoint_tests {
         try Subject([])
             .assert(\.relativePath, equals: [])
         try Subject(.dummyPath_foo)
-            .assert(\.relativePath, equals: PathOfStrings.dummyPath_foo)
+            .assert(\.relativePath, equals: .dummyPath_foo)
         try Subject(.dummyPath_foo_bar)
-            .assert(\.relativePath, equals: PathOfStrings.dummyPath_foo_bar)
+            .assert(\.relativePath, equals: .dummyPath_foo_bar)
         try Subject(.dummyPath_foo_bar_baz)
-            .assert(\.relativePath, equals: PathOfStrings.dummyPath_foo_bar_baz)
+            .assert(\.relativePath, equals: .dummyPath_foo_bar_baz)
     }
 }
 

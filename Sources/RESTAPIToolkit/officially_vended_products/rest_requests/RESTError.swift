@@ -55,7 +55,7 @@ extension RESTError: Codable where Request.StandardError: Codable {
                 rawData: container.decode(Data.self, forKey: .uninterpretable)
             )
         } else {
-            throw Self.standardDecodingError
+            throw "Could not decode `RESTError` from decoder.".asErrorMessage()
         }
     }
     
