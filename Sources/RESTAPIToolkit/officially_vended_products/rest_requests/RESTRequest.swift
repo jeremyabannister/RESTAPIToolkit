@@ -8,23 +8,50 @@
 /// An `RESTRequest` is everything that a `URLRequest` is minus the base URL, meaning that a single `RESTRequest` value is usable across many base URLs. Use `RESTRequest.urlRequest(usingBaseURL:)` to generate the `URLRequest` to send this `RESTRequest` to the given base URL.
 public struct RESTRequest: ProperValueType {
     
+    ///
     public var endpoint: RESTEndpoint
     public var method: String
-    public var headers: JSONHeaders?
+    public var headers: RESTHeaders?
     public var queryItems: URLQueryItems?
-    public var bodyParameters: JSONDictionary?
+    public var bodyData: Data?
     
-    public init (endpoint: RESTEndpoint,
-                 method: String,
-                 headers: JSONHeaders?,
-                 queryItems: URLQueryItems?,
-                 bodyParameters: JSONDictionary?) {
+    ///
+    public init
+        (endpoint: RESTEndpoint,
+         method: String,
+         headers: RESTHeaders?,
+         queryItems: URLQueryItems?,
+         bodyData: Data?) {
         
         self.endpoint = endpoint
         self.method = method
         self.headers = headers
         self.queryItems = queryItems
-        self.bodyParameters = bodyParameters
+        self.bodyData = bodyData
+    }
+}
+
+///
+public extension RESTRequest {
+    
+    ///
+    init
+        <Body: Codable>
+        (endpoint: RESTEndpoint,
+         method: String,
+         headers: RESTHeaders?,
+         queryItems: URLQueryItems?,
+         body: Body)
+    throws {
+        
+        ///
+        try self.init(
+            endpoint: endpoint,
+            method: method,
+            headers: headers,
+            queryItems: queryItems,
+            bodyData: JSONEncoder().encode(body)
+        )
     }
 }
 
@@ -38,7 +65,7 @@ public extension RESTRequest {
             method: self.method,
             headers: self.headers,
             queryItems: self.queryItems,
-            bodyParameters: self.bodyParameters
+            bodyData: self.bodyData
         )
     }
 }

@@ -1,15 +1,15 @@
 //
-//  JSONHeaders+dummies.swift
+//  RESTHeaders+dummies.swift
 //  
 //
 //  Created by Jeremy Bannister on 6/8/22.
 //
 
 ///
-public extension JSONHeaders {
+public extension RESTHeaders {
     
     ///
-    static var dummyJSONHeaders_ab_cd: Self {
+    static var dummyRESTHeaders_ab_cd: Self {
         [
             "a": "b",
             "c": "d"

@@ -22,9 +22,9 @@ extension RESTRequest_tests {
     func test_properties () {
         proof_mutableProperty(\.endpoint, RESTEndpoint.self)
         proof_mutableProperty(\.method, String.self)
-        proof_mutableProperty(\.headers, JSONHeaders?.self)
+        proof_mutableProperty(\.headers, RESTHeaders?.self)
         proof_mutableProperty(\.queryItems, URLQueryItems?.self)
-        proof_mutableProperty(\.bodyParameters, JSONDictionary?.self)
+        proof_mutableProperty(\.bodyData, Data?.self)
     }
     
     ///
@@ -32,15 +32,15 @@ extension RESTRequest_tests {
         try Subject(
             endpoint: .dummy_foo_bar,
             method: .testing123,
-            headers: .dummyJSONHeaders_ab_cd,
+            headers: .dummyRESTHeaders_ab_cd,
             queryItems: .dummy_fooBar,
-            bodyParameters: .dummyJSONDict
+            bodyData: .dummyBodyData
         )
             .assert(\.endpoint, equals: .dummy_foo_bar)
             .assert(\.method, equals: .testing123)
-            .assert(\.headers, equals: .dummyJSONHeaders_ab_cd)
+            .assert(\.headers, equals: .dummyRESTHeaders_ab_cd)
             .assert(\.queryItems, equals: .dummy_fooBar)
-            .assert(\.bodyParameters, equals: .dummyJSONDict)
+            .assert(\.bodyData, equals: .dummyBodyData)
     }
 }
 

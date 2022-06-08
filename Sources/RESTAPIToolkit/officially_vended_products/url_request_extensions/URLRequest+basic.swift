@@ -12,18 +12,19 @@ public extension URLRequest {
     // TODO: Why is `method` stringly typed instead of being an enum containing REST method options?
     
     ///
-    static func basic (url: URL,
-                       method: String,
-                       headers: JSONHeaders?,
-                       queryItems: URLQueryItems?,
-                       bodyParameters: JSONDictionary?)
-        -> URLRequest {
+    static func basic
+        (url: URL,
+         method: String,
+         headers: RESTHeaders?,
+         queryItems: URLQueryItems?,
+         bodyData: Data?)
+    -> URLRequest {
             
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.allHTTPHeaderFields = headers
         request.setQueryItems(to: queryItems)
-        request.httpBody = bodyParameters?.asJSONLiteral.asData()
+        request.httpBody = bodyData
         return request
     }
 }
