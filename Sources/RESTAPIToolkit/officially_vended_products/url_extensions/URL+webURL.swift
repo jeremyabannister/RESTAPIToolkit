@@ -11,6 +11,7 @@ public extension URL {
     static func webURL
         (scheme: WebURLScheme,
          host: String,
+         port: Int? = nil,
          path: [String]? = nil,
          queryItems: URLQueryItems? = nil)
     -> URL? {
@@ -19,6 +20,7 @@ public extension URL {
         URLComponents()
             .setting(\.scheme, to: scheme.identifier)
             .setting(\.host, to: host)
+            .trySetting(\.port, to: port)
             .trySetting(
                 \.path,
                  to: path.map { "/\($0.joined(separator: "/"))" }
