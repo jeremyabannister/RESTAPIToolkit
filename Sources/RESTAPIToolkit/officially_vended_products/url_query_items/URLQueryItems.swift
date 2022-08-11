@@ -9,6 +9,27 @@
 public typealias URLQueryItems = [URLQueryItem]
 
 ///
+extension URLQueryItem: Codable {
+    
+    ///
+    public func encode (to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
+        try container.encode(data)
+    }
+    
+    ///
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let data = try container.decode(Data.self)
+        guard let value = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Self else {
+            throw "Failed to decode data as \(Self.self): \(data.humanReadableDescription)".asErrorMessage()
+        }
+        self = value
+    }
+}
+
+///
 public extension URLQueryItems {
     
     ///
