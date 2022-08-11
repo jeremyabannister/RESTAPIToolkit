@@ -9,13 +9,13 @@
 public protocol RESTRequestEncodable: ProperValueType {
     
     ///
-    associatedtype Configuration: Hashable
+    associatedtype Configuration: Hashable & Codable
     
     ///
-    associatedtype SuccessfulResponse: Hashable
+    associatedtype SuccessfulResponse: Hashable & Codable
     
     ///
-    associatedtype StandardError: Hashable
+    associatedtype StandardError: Hashable & Codable
     
     ///
     func asRESTRequest (configuration: Configuration) -> RESTRequest
