@@ -9,8 +9,8 @@
 public extension XCTestCase {
     
     ///
-    func proof_RESTRequestEncodable <T: RESTRequestEncodable> (_ t: T.Type) { }
+    func proof_RESTEndpointRequestEncodable <T: RESTEndpointRequestEncodable> (_ t: T.Type) { }
     
     ///
-    func proof_RESTRequestEncodable <T: RESTRequestEncodable> (_ t: T) { }
+    func proof_RESTEndpointRequestEncodable <T: RESTEndpointRequestEncodable> (_ t: T) { }
 }

@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/FoundationToolkit",
       "state" : {
-        "revision" : "69015e07b20ca936b65937e52b1e87cf927fbc49",
-        "version" : "0.3.2"
+        "revision" : "091a59f4432b35f81982c8f63f9c119df12b4a39",
+        "version" : "0.3.7"
       }
     },
     {
@@ -59,7 +59,16 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/ProperValueType",
       "state" : {
-        "revision" : "fff4702852d0658676da1896c93625e7ff4b0f7d",
+        "revision" : "d6c91820e1e10a749e8bbed207a3f1cf5a2e75ab",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "randomlygeneratablemodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/RandomlyGeneratableModule",
+      "state" : {
+        "revision" : "89e6dea09d0df5c464a44f00b96b6fccd0f5452d",
         "version" : "0.1.0"
       }
     },

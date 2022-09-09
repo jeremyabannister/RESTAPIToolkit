@@ -7,4 +7,4 @@
 
 ///
 extension RESTEndpoint_tests { }
-extension RESTRequest_tests { }
+extension RESTEndpointRequest_tests { }

@@ -1,16 +1,16 @@
 //
-//  RESTRequest_tests.swift
+//  RESTEndpointRequest_tests.swift
 //
 //
 //  Created by Jeremy Bannister on 5/6/21.
 //
 
 ///
-extension RESTRequest_tests {
+extension RESTEndpointRequest_tests {
     
     ///
     func test_existence () {
-        let _: RESTRequest
+        let _: RESTEndpointRequest
     }
     
     ///
@@ -45,7 +45,7 @@ extension RESTRequest_tests {
 }
 
 ///
-extension RESTRequest_tests {
+extension RESTEndpointRequest_tests {
     
     ///
     func test_urlRequest_usingBaseURL () throws {

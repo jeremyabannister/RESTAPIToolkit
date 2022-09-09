@@ -11,6 +11,6 @@ public final class RESTEndpoint_tests: SingleTypeTestCase {
 }
 
 ///
-public final class RESTRequest_tests: SingleTypeTestCase {
-    public typealias Subject = RESTRequest
+public final class RESTEndpointRequest_tests: SingleTypeTestCase {
+    public typealias Subject = RESTEndpointRequest
 }

@@ -6,5 +6,5 @@
 //
 
 ///
-public typealias FailedRESTRequest <Request: RESTRequestEncodable> =
+public typealias FailedRESTRequest <Request: RESTEndpointRequestEncodable> =
     _CompletedRESTRequest<Request, RESTError<Request>>

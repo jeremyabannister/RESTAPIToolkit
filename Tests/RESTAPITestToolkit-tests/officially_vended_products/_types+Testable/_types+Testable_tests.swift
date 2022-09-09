@@ -13,7 +13,7 @@ extension RESTEndpoint_tests {
 }
 
 ///
-extension RESTRequest_tests {
+extension RESTEndpointRequest_tests {
     func test_conformsToTestable () {
         proof_Testable(metatype)
     }

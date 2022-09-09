@@ -1,12 +1,12 @@
 //
-//  RESTRequestEncodable.swift
+//  RESTEndpointRequestEncodable.swift
 //
 //
 //  Created by Jeremy Bannister on 12/7/20.
 //
 
 ///
-public protocol RESTRequestEncodable: ProperValueType {
+public protocol RESTEndpointRequestEncodable: ProperValueType {
     
     ///
     associatedtype Configuration: Hashable & Codable
@@ -18,7 +18,7 @@ public protocol RESTRequestEncodable: ProperValueType {
     associatedtype StandardError: Hashable & Codable
     
     ///
-    func asRESTRequest (configuration: Configuration) -> RESTRequest
+    func asRESTEndpointRequest (configuration: Configuration) -> RESTEndpointRequest
     
     ///
     func parseSuccessfulResponse (from data: Data) -> SuccessfulResponse?
@@ -28,7 +28,7 @@ public protocol RESTRequestEncodable: ProperValueType {
 }
 
 ///
-public extension RESTRequestEncodable {
+public extension RESTEndpointRequestEncodable {
     
     ///
     typealias RESTResult = Result<SuccessfulResponse, RESTError<Self>>

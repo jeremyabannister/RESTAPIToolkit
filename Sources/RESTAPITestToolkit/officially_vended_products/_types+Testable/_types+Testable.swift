@@ -7,4 +7,4 @@
 
 ///
 extension RESTEndpoint: Testable { }
-extension RESTRequest: Testable { }
+extension RESTEndpointRequest: Testable { }

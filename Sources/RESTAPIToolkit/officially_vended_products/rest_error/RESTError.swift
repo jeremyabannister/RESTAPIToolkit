@@ -6,7 +6,7 @@
 //
 
 ///
-public enum RESTError <Request: RESTRequestEncodable>: ProperValueType,
+public enum RESTError <Request: RESTEndpointRequestEncodable>: ProperValueType,
                                                        Error {
     
     ///

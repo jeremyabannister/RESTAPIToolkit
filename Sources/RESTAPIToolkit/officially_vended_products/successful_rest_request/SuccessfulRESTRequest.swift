@@ -6,5 +6,5 @@
 //
 
 ///
-public typealias SuccessfulRESTRequest <Request: RESTRequestEncodable> =
+public typealias SuccessfulRESTRequest <Request: RESTEndpointRequestEncodable> =
     _CompletedRESTRequest<Request, Request.SuccessfulResponse>

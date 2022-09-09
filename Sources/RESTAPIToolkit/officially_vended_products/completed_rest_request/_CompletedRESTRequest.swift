@@ -7,7 +7,7 @@
 
 ///
 public struct _CompletedRESTRequest
-    <Request: RESTRequestEncodable,
+    <Request: RESTEndpointRequestEncodable,
      Response: Hashable & Codable>:
         ProperValueType {
     

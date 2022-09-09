@@ -1,12 +1,12 @@
 //
-//  RESTRequest.swift
+//  RESTEndpointRequest.swift
 //
 //
 //  Created by Jeremy Bannister on 9/27/20.
 //
 
-/// An `RESTRequest` is everything that a `URLRequest` is minus the base URL, meaning that a single `RESTRequest` value is usable across many base URLs. Use `RESTRequest.urlRequest(usingBaseURL:)` to generate the `URLRequest` to send this `RESTRequest` to the given base URL.
-public struct RESTRequest: ProperValueType {
+/// A `RESTEndpointRequest` represents the details of a request to a given REST endpoint, but it does not contain any base URL, meaning that to upgrade a `RESTEndpointRequest` to a `URLRequest` (in order to be able to actually execute it) you'll need to provide just a base URL via the method `.urlRequest(usingBaseURL:)`.
+public struct RESTEndpointRequest: ProperValueType {
     
     ///
     public var endpoint: RESTEndpoint
@@ -32,7 +32,7 @@ public struct RESTRequest: ProperValueType {
 }
 
 ///
-public extension RESTRequest {
+public extension RESTEndpointRequest {
     
     ///
     init
@@ -56,7 +56,7 @@ public extension RESTRequest {
 }
 
 // MARK: - Convenience Methods
-public extension RESTRequest {
+public extension RESTEndpointRequest {
     
     /// This is the primary method of the `RESTRequest` type - ultimately a `URLRequest` is what will be needed in order to execute a network request, and this method is how that `URLRequest` should be generated. Pass in the base URL to which you want to send this `RESTRequest` in order to receive back the properly configured `URLRequest`.
     func urlRequest (usingBaseURL baseURL: URL) -> URLRequest {

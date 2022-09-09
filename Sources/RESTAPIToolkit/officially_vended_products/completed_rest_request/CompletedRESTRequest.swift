@@ -6,7 +6,7 @@
 //
 
 ///
-public typealias CompletedRESTRequest <Request: RESTRequestEncodable> =
+public typealias CompletedRESTRequest <Request: RESTEndpointRequestEncodable> =
     _CompletedRESTRequest<Request, RawRESTResponse>
 
 ///
