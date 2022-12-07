@@ -10,12 +10,39 @@
       }
     },
     {
+      "identity" : "data-humanreadabledescription",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/Data-humanReadableDescription",
+      "state" : {
+        "revision" : "38a7f852da2ad780626fcc30af528b0ae790d4a8",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "data-utf8string",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/Data-utf8String",
+      "state" : {
+        "revision" : "0c9ce9755054c84aea37bbb385f0859df837aca1",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "dummymodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/DummyModule",
+      "state" : {
+        "revision" : "ac22680abf1e4e7916c5abf53227395f51470bb1",
+        "version" : "0.1.0"
+      }
+    },
+    {
       "identity" : "emptycodablemodule",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/EmptyCodableModule",
       "state" : {
-        "revision" : "d8767f225c31dae6efce8e8b128611b0530a343e",
-        "version" : "0.1.0"
+        "revision" : "f796c11ca7ca1beb0d913cdd8879049969366c97",
+        "version" : "0.1.1"
       }
     },
     {
@@ -32,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/ExpressionErgonomics",
       "state" : {
-        "revision" : "d551b16edeb6d64a96b797b1c9f698a36e0d98ba",
-        "version" : "0.2.9"
+        "revision" : "be1fcd5978c4dc13548c67e5c6e6c59160d3d2c1",
+        "version" : "0.3.0"
       }
     },
     {
@@ -41,8 +68,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/FoundationToolkit",
       "state" : {
-        "revision" : "091a59f4432b35f81982c8f63f9c119df12b4a39",
-        "version" : "0.3.7"
+        "revision" : "d794b350186ac46a226ddccae6bf0b29576df793",
+        "version" : "0.4.2"
+      }
+    },
+    {
+      "identity" : "jsontoolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/JSONToolkit",
+      "state" : {
+        "revision" : "831dcad0477bb5259e7595c0bca69b4fb95aa9ef",
+        "version" : "0.1.0"
       }
     },
     {
@@ -82,12 +118,30 @@
       }
     },
     {
+      "identity" : "string-utf8data",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/String-utf8Data",
+      "state" : {
+        "revision" : "af34c29e3abefb0b8f48ba4d29b6942609da9a2a",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "subscript-collection-safely",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/subscript-collection-safely",
+      "state" : {
+        "revision" : "c78fbddba5ffdf074cc9e4e2d7fab0e5ec56700e",
+        "version" : "0.1.1"
+      }
+    },
+    {
       "identity" : "testable",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/Testable",
       "state" : {
-        "revision" : "5eb6bfd344bbf0fea93cf59027a13dcb52825a47",
-        "version" : "0.1.2"
+        "revision" : "7a70c45c2f30f3d11b69c49c75314767166965a1",
+        "version" : "0.1.5"
       }
     },
     {
@@ -95,8 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/VerboseEquatable",
       "state" : {
-        "revision" : "1cc7ee4342ab5b5f6c1a2e6581fee21d2fb5ea42",
-        "version" : "0.1.4"
+        "revision" : "7089d4e3e775f6eee3e9752ba8b7018b250f1598",
+        "version" : "0.1.5"
       }
     },
     {
@@ -104,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeremyabannister/XCTestToolkit",
       "state" : {
-        "revision" : "b564a62731a30b434d110b8d43775707a15dd227",
-        "version" : "0.1.3"
+        "revision" : "18ba03cf4531f5e27f3dfa479ce5304e74fb8c17",
+        "version" : "0.1.4"
       }
     }
   ],
