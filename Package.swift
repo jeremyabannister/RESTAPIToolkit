@@ -26,7 +26,7 @@ let package = Package(
         ///
         .package(
             url: "https://github.com/jeremyabannister/FoundationToolkit",
-            from: "0.4.2"
+            from: "0.4.4"
         )
     ],
     targets: [
