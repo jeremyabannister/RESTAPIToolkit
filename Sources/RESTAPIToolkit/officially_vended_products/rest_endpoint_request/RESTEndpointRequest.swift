@@ -36,7 +36,7 @@ public extension RESTEndpointRequest {
     
     ///
     init
-        <Body: Codable>
+        <Body: Encodable>
         (endpoint: RESTEndpoint,
          method: String,
          headers: RESTHeaders?,
