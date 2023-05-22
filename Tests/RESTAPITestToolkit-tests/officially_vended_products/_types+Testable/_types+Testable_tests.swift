@@ -8,13 +8,13 @@
 ///
 extension RESTEndpoint_tests {
     func test_conformsToTestable () {
-        proof_Testable(metatype)
+        metatype.proof_Testable()
     }
 }
 
 ///
 extension RESTEndpointRequest_tests {
     func test_conformsToTestable () {
-        proof_Testable(metatype)
+        metatype.proof_Testable()
     }
 }

@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.8
 
 ///
 import PackageDescription
@@ -6,7 +6,7 @@ import PackageDescription
 ///
 let package = Package(
     name: "RESTAPIToolkit",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v3), .tvOS(.v10)],
+    platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v4), .tvOS(.v11)],
     products: [
         
         ///
@@ -26,7 +26,7 @@ let package = Package(
         ///
         .package(
             url: "https://github.com/jeremyabannister/FoundationToolkit",
-            from: "0.4.4"
+            "0.7.0" ..< "0.8.0"
         )
     ],
     targets: [
@@ -37,7 +37,7 @@ let package = Package(
             dependencies: [
                 
                 ///
-                "FoundationToolkit"
+                "FoundationToolkit",
             ]
         ),
         
@@ -53,20 +53,24 @@ let package = Package(
                 .product(
                     name: "FoundationTestToolkit",
                     package: "FoundationToolkit"
-                )
+                ),
             ]
         ),
         
         ///
         .testTarget(
             name: "RESTAPIToolkit-tests",
-            dependencies: ["RESTAPITestToolkit"]
+            dependencies: [
+                "RESTAPITestToolkit",
+            ]
         ),
         
         ///
         .testTarget(
             name: "RESTAPITestToolkit-tests",
-            dependencies: ["RESTAPITestToolkit"]
+            dependencies: [
+                "RESTAPITestToolkit",
+            ]
         ),
     ]
 )
