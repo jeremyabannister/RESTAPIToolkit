@@ -6,7 +6,7 @@ import PackageDescription
 ///
 let package = Package(
     name: "RESTAPIToolkit",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v4), .tvOS(.v11)],
+    platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v5), .tvOS(.v11)],
     products: [
         
         ///
