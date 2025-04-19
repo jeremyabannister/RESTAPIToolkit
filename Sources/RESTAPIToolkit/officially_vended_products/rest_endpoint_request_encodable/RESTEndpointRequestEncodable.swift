@@ -6,30 +6,30 @@
 //
 
 ///
-public protocol RESTEndpointRequestEncodable: ProperValueType {
+public protocol RESTEndpointRequestEncodable: ValueType {
     
     ///
-    associatedtype Configuration: Hashable & Codable
+    associatedtype Configuration: Hashable & Sendable
     
     ///
-    associatedtype SuccessfulResponse: Hashable & Codable
+    associatedtype SuccessfulResponse: Hashable & Sendable
     
     ///
-    associatedtype StandardError: Hashable & Codable
+    associatedtype StandardError: Hashable & Sendable
     
     ///
-    func asRESTEndpointRequest (configuration: Configuration) -> RESTEndpointRequest
+    func asRESTEndpointRequest(configuration: Configuration) -> RESTEndpointRequest
     
     ///
-    func parseSuccessfulResponse (from data: Data) -> SuccessfulResponse?
+    func parseSuccessfulResponse(from data: Data) -> SuccessfulResponse?
     
     ///
-    func parseStandardError (from data: Data) -> StandardError?
+    func parseStandardError(from data: Data) -> StandardError?
 }
 
 ///
-public extension RESTEndpointRequestEncodable {
+extension RESTEndpointRequestEncodable {
     
     ///
-    typealias RESTResult = Result<SuccessfulResponse, RESTError<Self>>
+    public typealias RESTResult = Result<SuccessfulResponse, RESTError<Self>>
 }

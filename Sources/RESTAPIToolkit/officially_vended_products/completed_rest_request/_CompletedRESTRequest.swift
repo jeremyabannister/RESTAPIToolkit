@@ -6,10 +6,10 @@
 //
 
 ///
-public struct _CompletedRESTRequest
-    <Request: RESTEndpointRequestEncodable,
-     Response: Hashable & Codable>:
-        ProperValueType {
+public struct _CompletedRESTRequest<
+    Request: RESTEndpointRequestEncodable,
+    Response: Hashable & Sendable
+>: ValueType {
     
     ///
     public var request: Request
@@ -24,11 +24,12 @@ public struct _CompletedRESTRequest
     public var dateCompleted: Date
     
     ///
-    public init (request: Request,
-                 response: Response,
-                 dateInitiated: Date,
-                 dateCompleted: Date) {
-        
+    public init(
+        request: Request,
+        response: Response,
+        dateInitiated: Date,
+        dateCompleted: Date
+    ) {
         self.request = request
         self.response = response
         self.dateInitiated = dateInitiated

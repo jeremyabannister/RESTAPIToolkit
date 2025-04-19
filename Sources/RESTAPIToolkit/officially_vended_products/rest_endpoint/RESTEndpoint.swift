@@ -6,36 +6,36 @@
 //
 
 ///
-public struct RESTEndpoint: ProperValueType,
+public struct RESTEndpoint: ValueType,
                             CustomStringConvertible {
     
     ///
     public var relativePath: [String]
     
     ///
-    public init (_ relativePath: [String]) {
+    public init(_ relativePath: [String]) {
         self.relativePath = relativePath
     }
 }
 
-public extension RESTEndpoint {
+extension RESTEndpoint {
     
     ///
-    func absoluteURL (usingBase baseURL: URL) -> URL {
+    public func absoluteURL(usingBase baseURL: URL) -> URL {
         baseURL.appendingStringPath(relativePath)
     }
     
     ///
-    func appendingPathComponent (_ pathComponent: String) -> RESTEndpoint {
+    public func appendingPathComponent(_ pathComponent: String) -> RESTEndpoint {
         self.mutating(\.relativePath) { $0.append(pathComponent) }
     }
 }
 
 ///
-public extension RESTEndpoint {
+extension RESTEndpoint {
     
     ///
-    var description: String {
+    public var description: String {
         "/\(relativePath.joined(separator: "/"))"
     }
 }
@@ -44,7 +44,7 @@ public extension RESTEndpoint {
 fileprivate extension URL {
     
     ///
-    func appendingStringPath (_ stringPath: [String]) -> Self {
+    func appendingStringPath(_ stringPath: [String]) -> Self {
         stringPath.reduce(into: self) { $0.appendPathComponent($1) }
     }
 }

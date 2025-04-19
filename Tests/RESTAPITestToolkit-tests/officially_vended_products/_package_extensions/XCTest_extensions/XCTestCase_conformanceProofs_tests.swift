@@ -9,18 +9,18 @@
 extension XCTestCase_tests {
     
     ///
-    func test_proof_RESTEndpointRequestEncodable_Metatype () {
-        func imagine <T: RESTEndpointRequestEncodable> (t: T) {
-            ifGiven(metatype) {
+    func test_proof_RESTEndpointRequestEncodable_Metatype() {
+        func imagine<T: RESTEndpointRequestEncodable>(t: T) {
+            ifGiven(Subject.self) {
                 $0.proof_RESTEndpointRequestEncodable(T.self)
             }
         }
     }
     
     ///
-    func test_proof_RESTEndpointRequestEncodable_instance () {
-        func imagine <T: RESTEndpointRequestEncodable> (t: T) {
-            ifGiven(metatype) {
+    func test_proof_RESTEndpointRequestEncodable_instance() {
+        func imagine<T: RESTEndpointRequestEncodable>(t: T) {
+            ifGiven(Subject.self) {
                 $0.proof_RESTEndpointRequestEncodable(t)
             }
         }

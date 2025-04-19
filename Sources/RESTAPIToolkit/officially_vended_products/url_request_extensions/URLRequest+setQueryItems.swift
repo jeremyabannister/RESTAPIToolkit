@@ -7,15 +7,15 @@
 
 // MARK: - URLRequest_setQueryItems -
 
-public extension URLRequest {
+extension URLRequest {
     
     ///
-    mutating func setQueryItems (to queryItems: URLQueryItems?) {
+    public mutating func setQueryItems(to queryItems: URLQueryItems?) {
         self = self.settingQueryItems(to: queryItems)
     }
     
     ///
-    func settingQueryItems (to queryItems: URLQueryItems?) -> URLRequest {
+    public func settingQueryItems(to queryItems: URLQueryItems?) -> URLRequest {
         self.setting(\.url, to: self.url?.settingQueryItems(to: queryItems))
     }
 }
@@ -23,7 +23,7 @@ public extension URLRequest {
 
 // MARK: - URL + URLQueryItems -
 
-public extension URL {
+extension URL {
     
     /// Returns a copy of the receiving `URL` with the query items changed to the given ones.
     ///
@@ -45,12 +45,12 @@ public extension URL {
     ///     }
     /// }
     /// ```
-    func settingQueryItems (to queryItems: ()->URLQueryItems?) -> URL {
+    public func settingQueryItems(to queryItems: ()->URLQueryItems?) -> URL {
         settingQueryItems(to: queryItems())
     }
     
     /// Returns a copy of the receiving `URL` with the query items changed to the given ones.
-    func settingQueryItems (to queryItems: URLQueryItems?) -> URL {
+    public func settingQueryItems(to queryItems: URLQueryItems?) -> URL {
         URLComponents(
             url: self,
             resolvingAgainstBaseURL: false

@@ -6,15 +6,14 @@
 //
 
 ///
-public enum RESTError <Request: RESTEndpointRequestEncodable>: ProperValueType,
-                                                       Error {
+public enum RESTError<Request: RESTEndpointRequestEncodable>: ValueType, Error {
     
     ///
-    case networkError (NetworkError)
+    case networkError(NetworkError)
     
     ///
-    case understood (standardError: Request.StandardError)
+    case understood(standardError: Request.StandardError)
     
     ///
-    case uninterpretable (rawData: Data)
+    case uninterpretable(rawData: Data)
 }

@@ -5,16 +5,16 @@
 //  Created by Jeremy Bannister on 6/8/22.
 //
 
-public extension URL {
+extension URL {
     
     ///
-    static func webURL
-        (scheme: WebURLScheme,
-         host: String,
-         port: Int? = nil,
-         path: [String]? = nil,
-         queryItems: URLQueryItems? = nil)
-    -> URL? {
+    public static func webURL(
+        scheme: WebURLScheme,
+        host: String,
+        port: Int? = nil,
+        path: [String]? = nil,
+        queryItems: URLQueryItems? = nil
+    ) -> URL? {
         
         ///
         URLComponents()
@@ -33,13 +33,13 @@ public extension URL {
     }
     
     ///
-    static func webURL
-        (scheme: WebURLScheme,
-         subdomain: String?,
-         domain: String,
-         path: [String]?,
-         queryItems: URLQueryItems?)
-    -> URL? {
+    public static func webURL(
+        scheme: WebURLScheme,
+        subdomain: String?,
+        domain: String,
+        path: [String]?,
+        queryItems: URLQueryItems?
+    ) -> URL? {
         
         ///
         webURL(

@@ -15,16 +15,16 @@ extension RESTEndpointRequest_tests {
     
     ///
     func test_conformances () {
-        proof_Equatable(metatype)
+        Subject.proofOfConformanceTo_ValueType()
     }
     
     ///
     func test_properties () {
-        proof_mutableProperty(\.endpoint, RESTEndpoint.self)
-        proof_mutableProperty(\.method, String.self)
-        proof_mutableProperty(\.headers, RESTHeaders?.self)
-        proof_mutableProperty(\.queryItems, URLQueryItems?.self)
-        proof_mutableProperty(\.bodyData, Data?.self)
+        Subject.proofOfMutableProperty(\.endpoint, RESTEndpoint.self)
+        Subject.proofOfMutableProperty(\.method, String.self)
+        Subject.proofOfMutableProperty(\.headers, RESTHeaders?.self)
+        Subject.proofOfMutableProperty(\.queryItems, URLQueryItems?.self)
+        Subject.proofOfMutableProperty(\.bodyData, Data?.self)
     }
     
     ///

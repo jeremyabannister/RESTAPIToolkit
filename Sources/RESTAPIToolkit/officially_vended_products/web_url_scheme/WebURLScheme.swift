@@ -6,14 +6,12 @@
 //
 
 ///
-public enum WebURLScheme: ProperValueType {
-    
-    ///
+public enum WebURLScheme: ValueType {
     case http
     case https
     case ws
     case wss
-    case other (String)
+    case other(String)
     
     ///
     public var identifier: String {
@@ -22,7 +20,7 @@ public enum WebURLScheme: ProperValueType {
         case .https: return "https"
         case .ws: return "ws"
         case .wss: return "wss"
-        case .other (let scheme): return scheme
+        case .other(let scheme): return scheme
         }
     }
 }

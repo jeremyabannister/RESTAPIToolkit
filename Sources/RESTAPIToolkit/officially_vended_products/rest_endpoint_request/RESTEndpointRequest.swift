@@ -6,9 +6,7 @@
 //
 
 /// A `RESTEndpointRequest` represents the details of a request to a given REST endpoint, but it does not contain any base URL, meaning that to upgrade a `RESTEndpointRequest` to a `URLRequest` (in order to be able to actually execute it) you'll need to provide just a base URL via the method `.urlRequest(usingBaseURL:)`.
-public struct RESTEndpointRequest: ProperValueType {
-    
-    ///
+public struct RESTEndpointRequest: ValueType {
     public var endpoint: RESTEndpoint
     public var method: String
     public var headers: RESTHeaders?
@@ -16,13 +14,13 @@ public struct RESTEndpointRequest: ProperValueType {
     public var bodyData: Data?
     
     ///
-    public init
-        (endpoint: RESTEndpoint,
-         method: String,
-         headers: RESTHeaders?,
-         queryItems: URLQueryItems?,
-         bodyData: Data?) {
-        
+    public init(
+        endpoint: RESTEndpoint,
+        method: String,
+        headers: RESTHeaders?,
+        queryItems: URLQueryItems?,
+        bodyData: Data?
+    ) {
         self.endpoint = endpoint
         self.method = method
         self.headers = headers
@@ -32,17 +30,16 @@ public struct RESTEndpointRequest: ProperValueType {
 }
 
 ///
-public extension RESTEndpointRequest {
+extension RESTEndpointRequest {
     
     ///
-    init
-        <Body: Encodable>
-        (endpoint: RESTEndpoint,
-         method: String,
-         headers: RESTHeaders?,
-         queryItems: URLQueryItems?,
-         body: Body)
-    throws {
+    public init<Body: Encodable>(
+        endpoint: RESTEndpoint,
+        method: String,
+        headers: RESTHeaders?,
+        queryItems: URLQueryItems?,
+        body: Body
+    ) throws {
         
         ///
         try self.init(
@@ -56,10 +53,10 @@ public extension RESTEndpointRequest {
 }
 
 // MARK: - Convenience Methods
-public extension RESTEndpointRequest {
+extension RESTEndpointRequest {
     
     /// This is the primary method of the `RESTRequest` type - ultimately a `URLRequest` is what will be needed in order to execute a network request, and this method is how that `URLRequest` should be generated. Pass in the base URL to which you want to send this `RESTRequest` in order to receive back the properly configured `URLRequest`.
-    func urlRequest (usingBaseURL baseURL: URL) -> URLRequest {
+    public func urlRequest(usingBaseURL baseURL: URL) -> URLRequest {
         .basic(
             url: self.endpoint.absoluteURL(usingBase: baseURL),
             method: self.method,

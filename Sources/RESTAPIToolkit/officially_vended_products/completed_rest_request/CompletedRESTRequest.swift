@@ -10,10 +10,10 @@ public typealias CompletedRESTRequest <Request: RESTEndpointRequestEncodable> =
     _CompletedRESTRequest<Request, RawRESTResponse>
 
 ///
-public extension _CompletedRESTRequest where Response == RawRESTResponse {
+extension _CompletedRESTRequest where Response == RawRESTResponse {
     
     ///
-    var asSuccessfulRequest: SuccessfulRESTRequest<Request>? {
+    public var asSuccessfulRequest: SuccessfulRESTRequest<Request>? {
         switch self.asSuccessOrFailure {
         case .success (let successfulRequest):
             return successfulRequest
@@ -24,7 +24,7 @@ public extension _CompletedRESTRequest where Response == RawRESTResponse {
     }
     
     ///
-    var asFailedRequest: FailedRESTRequest<Request>? {
+    public var asFailedRequest: FailedRESTRequest<Request>? {
         switch self.asSuccessOrFailure {
         case .failure (let failedRequest):
             return failedRequest
@@ -35,7 +35,7 @@ public extension _CompletedRESTRequest where Response == RawRESTResponse {
     }
     
     ///
-    var asSuccessOrFailure: Result<SuccessfulRESTRequest<Request>, FailedRESTRequest<Request>> {
+    public var asSuccessOrFailure: Result<SuccessfulRESTRequest<Request>, FailedRESTRequest<Request>> {
         switch result() {
         case .success (let successfulResponse):
             return
@@ -62,7 +62,7 @@ public extension _CompletedRESTRequest where Response == RawRESTResponse {
     }
     
     ///
-    func result () -> Request.RESTResult {
+    public func result() -> Request.RESTResult {
         switch response {
         case .success (let data):
             if let successfulValue = request.parseSuccessfulResponse(from: data) {
@@ -78,7 +78,7 @@ public extension _CompletedRESTRequest where Response == RawRESTResponse {
     }
     
     ///
-    var wasSuccessful: Bool {
+    public var wasSuccessful: Bool {
         result().successfulValue.isNotNil
     }
 }
