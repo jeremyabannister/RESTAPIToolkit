@@ -15,16 +15,16 @@ extension RESTRequest_tests {
     
     ///
     func test_conformances () {
-        proof_Equatable(metatype)
+        Subject.proofOfConformanceTo_Equatable()
     }
     
     ///
     func test_properties () {
-        proof_mutableProperty(\.endpoint, RESTEndpoint.self)
-        proof_mutableProperty(\.method, String.self)
-        proof_mutableProperty(\.headers, JSONHeaders?.self)
-        proof_mutableProperty(\.queryItems, URLQueryItems?.self)
-        proof_mutableProperty(\.bodyParameters, JSONDictionary?.self)
+        proof_mutableProperty(\Subject.endpoint, RESTEndpoint.self)
+        proof_mutableProperty(\Subject.method, String.self)
+        proof_mutableProperty(\Subject.headers, JSONHeaders?.self)
+        proof_mutableProperty(\Subject.queryItems, URLQueryItems?.self)
+        proof_mutableProperty(\Subject.bodyParameters, JSONDictionary?.self)
     }
     
     ///

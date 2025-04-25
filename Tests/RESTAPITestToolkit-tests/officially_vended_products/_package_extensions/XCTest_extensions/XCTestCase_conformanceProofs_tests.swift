@@ -11,7 +11,7 @@ extension XCTestCase_tests {
     ///
     func test_proof_RESTRequestEncodable_Metatype () {
         func imagine <T: RESTRequestEncodable> (t: T) {
-            ifGiven(metatype) {
+            ifGiven(XCTestCase.self) {
                 $0.proof_RESTRequestEncodable(T.self)
             }
         }
@@ -20,7 +20,7 @@ extension XCTestCase_tests {
     ///
     func test_proof_RESTRequestEncodable_instance () {
         func imagine <T: RESTRequestEncodable> (t: T) {
-            ifGiven(metatype) {
+            ifGiven(XCTestCase.self) {
                 $0.proof_RESTRequestEncodable(t)
             }
         }

@@ -8,6 +8,7 @@
 ///
 public final class RESTEndpoint_tests: SingleTypeTestCase {
     public typealias Subject = RESTEndpoint
+    public var metatype: Subject.Type { Subject.self }
 }
 
 ///

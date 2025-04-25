@@ -1,10 +1,10 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.8
 
 import PackageDescription
 
 let package = Package(
     name: "RESTAPIToolkit",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .watchOS(.v3), .tvOS(.v10)],
+    platforms: [.macOS(.v12), .iOS(.v13), .watchOS(.v4), .tvOS(.v12)],
     products: [
         .library(
             name: "RESTAPIToolkit",
@@ -18,7 +18,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/jeremyabannister/DateToolkit",
-            from: "0.2.1"
+            .upToNextMinor(from: "0.2.6")
         )
     ],
     targets: [

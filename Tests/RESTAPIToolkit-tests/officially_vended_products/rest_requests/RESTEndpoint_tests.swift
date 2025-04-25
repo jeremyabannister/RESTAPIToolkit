@@ -15,14 +15,14 @@ extension RESTEndpoint_tests {
     
     ///
     func test_conformances () {
-        proof_CustomStringConvertible(metatype)
-        proof_Equatable(metatype)
+        Subject.proofOfConformanceTo_CustomStringConvertible()
+        Subject.proofOfConformanceTo_Equatable()
         proof_ExpressionErgonomic(metatype)
     }
     
     ///
     func test_properties () {
-        proof_mutableProperty(\.relativePath, PathOfStrings.self)
+        proof_mutableProperty(\Subject.relativePath, PathOfStrings.self)
     }
     
     ///

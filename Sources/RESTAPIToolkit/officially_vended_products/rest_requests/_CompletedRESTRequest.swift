@@ -7,7 +7,7 @@
 
 ///
 public struct _CompletedRESTRequest <Request: RESTRequestEncodable,
-                                     Response: Hashable>: ProperValueType {
+                                     Response: Hashable>: Hashable & ExpressionErgonomic {
     
     ///
     public var request: Request
