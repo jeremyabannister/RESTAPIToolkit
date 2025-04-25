@@ -22,7 +22,7 @@ extension RESTEndpoint_tests {
     
     ///
     func test_properties () {
-        proof_mutableProperty(\.relativePath, Array<String>.self)
+        proofThatSubjectHasSettableProperty(\.relativePath, ofType: Array<String>.self)
     }
     
     ///

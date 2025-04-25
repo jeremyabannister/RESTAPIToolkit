@@ -6,7 +6,7 @@
 //
 
 ///
-public enum RESTError <Request: RESTRequestEncodable>: Hashable & ExpressionErgonomic,
+public enum RESTError <Request: RESTRequestEncodable>: ProperValueType,
                                                        Error {
     
     ///

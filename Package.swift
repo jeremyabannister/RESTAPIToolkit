@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.8
 
 ///
 import PackageDescription
@@ -26,7 +26,7 @@ let package = Package(
         ///
         .package(
             url: "https://github.com/jeremyabannister/FoundationToolkit",
-            from: "0.1.0"
+            .upToNextMinor(from: "0.7.11")
         )
     ],
     targets: [

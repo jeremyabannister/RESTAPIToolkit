@@ -20,11 +20,11 @@ extension RESTRequest_tests {
     
     ///
     func test_properties () {
-        proof_mutableProperty(\.endpoint, RESTEndpoint.self)
-        proof_mutableProperty(\.method, String.self)
-        proof_mutableProperty(\.headers, RESTHeaders?.self)
-        proof_mutableProperty(\.queryItems, URLQueryItems?.self)
-        proof_mutableProperty(\.bodyData, Data?.self)
+        proofThatSubjectHasSettableProperty(\.endpoint, ofType: RESTEndpoint.self)
+        proofThatSubjectHasSettableProperty(\.method, ofType: String.self)
+        proofThatSubjectHasSettableProperty(\.headers, ofType: RESTHeaders?.self)
+        proofThatSubjectHasSettableProperty(\.queryItems, ofType: URLQueryItems?.self)
+        proofThatSubjectHasSettableProperty(\.bodyData, ofType: Data?.self)
     }
     
     ///
